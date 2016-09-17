@@ -28,15 +28,40 @@
 .introduce-card{
 	ion-list{
 		ion-item{
+			border-color: transparent;
+
 			.program-title{
 				font-weight: bold;
 				font-size: 30px;
 				line-height: normal;
+			}
+			&.dot-thumbnail{
+				padding-left: 66px;
+				img{
+					max-width: 40px;
+					max-height: 40px;
+				}
+				.introduce-content-header{
+					font-size: 20px;
+				}
+				.introduce-content-content{
+					white-space: normal;
+					.recent-content-date{
+						font-size: 13px;
+					}
+				}
 			}
 		}
 	}
 	.program-content{
 		white-space: normal;
 		margin: 0 10px;
+	}
+	.program-image{
+		img{
+			width: 60%;
+			height: 60%;
+			margin-left: 20%;
+		}
 	}
 }

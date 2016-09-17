@@ -10021,11 +10021,29 @@ a.button {
     .graph-card .row .col .content {
       font-size: 30px; }
 
-.introduce-card ion-list ion-item .program-title {
-  font-weight: bold;
-  font-size: 30px;
-  line-height: normal; }
+.introduce-card ion-list ion-item {
+  border-color: transparent; }
+  .introduce-card ion-list ion-item .program-title {
+    font-weight: bold;
+    font-size: 30px;
+    line-height: normal; }
+  .introduce-card ion-list ion-item.dot-thumbnail {
+    padding-left: 66px; }
+    .introduce-card ion-list ion-item.dot-thumbnail img {
+      max-width: 40px;
+      max-height: 40px; }
+    .introduce-card ion-list ion-item.dot-thumbnail .introduce-content-header {
+      font-size: 20px; }
+    .introduce-card ion-list ion-item.dot-thumbnail .introduce-content-content {
+      white-space: normal; }
+      .introduce-card ion-list ion-item.dot-thumbnail .introduce-content-content .recent-content-date {
+        font-size: 13px; }
 
 .introduce-card .program-content {
   white-space: normal;
   margin: 0 10px; }
+
+.introduce-card .program-image img {
+  width: 60%;
+  height: 60%;
+  margin-left: 20%; }

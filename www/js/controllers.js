@@ -4,11 +4,12 @@ angular.module('starter.controllers', [])
 
 .controller('ProgramCtrl', function($scope) {})
 
-.controller('TimelineCtrl', ['$scope',function($scope) {
+.controller('TimelineCtrl', ['$scope', '$ionicScrollDelegate', function($scope, $ionicScrollDelegate) {
   $scope.selectedIndex = 0;
   $scope.buttonClicked = function(index){
     $scope.selectedIndex = index;
     $scope.$apply();
+    $ionicScrollDelegate.scrollTop();
   } 
 }])
 
