@@ -1,0 +1,26 @@
+<ion-view view-title="ログイン">
+	<ion-content class="login-content">
+		<div class="logo">
+		</div>
+		<label class="item item-input">
+			<i class="icon ion-search placeholder-icon"></i>
+			<input type="text" placeholder="username" ng-model="username">
+		</label>
+		<label class="item item-input">
+			<i class="icon ion-search placeholder-icon"></i>
+			<input type="text" placeholder="Password" ng-model="password">
+		</label>
+		<button class="button button-assertive" on-tap="login(username, password)">
+			LOGIN
+		</button>
+		<div class="or">
+			OR
+		</div>
+		<div class="button-area">
+			<button class="facebook" on-tap="setNavTitle('hoge')">
+			</button>
+			<button class="twitter">
+			</button>
+		</div>
+	</ion-content>
+</ion-view>
