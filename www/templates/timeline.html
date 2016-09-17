@@ -7,7 +7,17 @@
 				<ti-segmented-control-button class="button-positive" title="'番組詳細'"></ti-segmented-control-button>
 			</ti-segmented-control>
 		</div>
-		<program-detail>
-		</program-detail>
+		<div class="program-detail-content" ng-if="selectedIndex === 0">
+			<program-detail>
+			</program-detail>
+		</div>
+		<div class="ticket-content" ng-if="selectedIndex === 1">
+			<ticket>
+			</ticket>
+		</div>
+		<div class="introduce-content" ng-if="selectedIndex === 2">
+			<introduce>
+			</introduce>
+		</div>
 	</ion-content>
 </ion-view>

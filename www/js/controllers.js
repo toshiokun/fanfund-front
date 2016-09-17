@@ -5,7 +5,10 @@ angular.module('starter.controllers', [])
 .controller('ProgramCtrl', function($scope) {})
 
 .controller('TimelineCtrl', ['$scope',function($scope) {
-
+  $scope.buttonClicked = function(index){
+      $scope.selectedIndex = index;
+      $scope.$apply();
+  } 
 }])
 
 .component('ticket', {
