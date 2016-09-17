@@ -9,7 +9,7 @@ angular.module('starter.controllers', [])
   $scope.username;
   $scope.password;
 
-  $scope.$on("$ionicView.beforeEnter", function(event, data){
+  $scope.$on("$ionicView.afterEnter", function(event, data){
    // handle event
    $ionicNavBarDelegate.showBar(false);
  });
