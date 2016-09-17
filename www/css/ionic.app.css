@@ -9924,6 +9924,22 @@ a.button {
 .hoge {
   color: #007b09; }
 
+.ticket-area ion-item {
+  border-color: transparent; }
+
+.ticket-area .item-thumbnail-left .cheer-number {
+  color: red; }
+
+.ticket-area .item-thumbnail-left .point-price {
+  height: 50px;
+  font-size: 50px;
+  text-align: right;
+  line-height: 45px; }
+
+.ticket-area .ticket-count {
+  font-size: 30px;
+  text-align: center; }
+
 .ticket-area .ticket-action-button {
   width: 100%;
   margin: 15px 0; }

@@ -2,36 +2,35 @@ angular.module('starter.services', [])
 
 .constant('RootUrl', "localhost:8000")
 
-.service('HttpService',['$http', 'RootUrl', function($http, rootUrl){
+.service('HttpService',['$resource', 'RootUrl', function($resource, rootUrl){
   return {
-    post: function(url, data){
+    resource: function(url, data){
       if (localStorage["token"] === ""){
-        return $http({
-          method: 'POST',
-          url: rootUrl +  url,
-          data: data
+        return $resource(rootUrl +  url,　{}, {
+          post: {
+            method: 'POST'
+          },
+          get : {
+            method: 'GET'
+          }
         })      
       } else {
-        return $http({
-          method: 'POST',
-          url: rootUrl +  url + "?token=" + localStorage["token"],
-          data: data
+        return $resource(rootUrl +  url + "?token=" + localStorage["token"],　data, {
+          post: {
+            method: 'POST'
+          },
+          get : {
+            method: 'GET'
+          }
         })
-      }
-    },
-    get: function(url, data){
-      return $http({
-        method: 'GET',
-        url: rootUrl + url + "?token=" + localStorage["token"],
-        data: data
-      })},
-      hoge: function(){
-        console.log(rootUrl);
-        console.log(localStorage["token"]);
-      }
     }
-  }])
-.factory('Chats', function() {
+  },
+    hoge: function(){
+      console.log(rootUrl);
+      console.log(localStorage["token"]);
+    }
+    }}])
+        .factory('Chats', function() {
   // Might use a resource here that returns a JSON array
 
   // Some fake testing data

@@ -50,7 +50,7 @@ angular.module('starter.controllers', [])
       username: username,
       password: password
     }
-    httpService.post("/user/login", data).then(
+    httpService.resource("/user/login").post(data,
       function(data){
         console.log(data);
         localStorage["token"] = data.token;

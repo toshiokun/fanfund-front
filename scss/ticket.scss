@@ -1,4 +1,23 @@
 .ticket-area{
+	ion-item{
+		border-color: transparent;
+	}
+	.item-thumbnail-left{
+		.cheer-number{
+			color: red;
+		}
+		.point-price{
+			height: 50px;
+			font-size: 50px;
+			text-align: right;
+			line-height: 45px;
+		}
+
+	}
+	.ticket-count{
+		font-size: 30px;
+		text-align: center;
+	}
 	.ticket-action-button{
 		width: 100%;
 		margin: 15px 0;
