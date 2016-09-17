@@ -9924,6 +9924,14 @@ a.button {
 .hoge {
   color: #007b09; }
 
+.ticket-area .ticket-action-button {
+  width: 100%;
+  margin: 15px 0; }
+  .ticket-area .ticket-action-button .button {
+    font-size: 25px;
+    width: 80%;
+    margin: 0 10%; }
+
 .ticket-area .my-area {
   display: inline-flex;
   justify-content: center;
