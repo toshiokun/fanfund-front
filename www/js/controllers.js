@@ -4,9 +4,30 @@ angular.module('starter.controllers', [])
 
 .controller('ProgramCtrl', function($scope) {})
 
-.controller('TimelineCtrl', ['$scope', function($scope) {
-
+.controller('TimelineCtrl', ['$scope',function($scope) {
+    
 }])
+
+.component('ticket', {
+  templateUrl: 'templates/ticket.html',
+  controller: [function(){
+
+  }]
+})
+
+.component('introduce', {
+  templateUrl: 'templates/introduce.html',
+  controller: [function(){
+
+  }]
+})
+
+.component('programDetail', {
+  templateUrl: 'templates/detail.html',
+  controller: [function(){
+
+  }]
+})
 
 .controller('HomeCtrl', ['$scope', '$ionicNavBarDelegate', function($scope, $ionicNavBarDelegate){
     $scope.$on("$ionicView.afterEnter", function(event, data){
@@ -15,7 +36,7 @@ angular.module('starter.controllers', [])
  });
 }])
 
-.controller('LoginCtrl',['$scope', '$ionicNavBarDelegate', '$http', function($scope, $ionicNavBarDelegate, $http) {
+.controller('LoginCtrl',['$scope', '$state', '$ionicNavBarDelegate', '$http', function($scope, $state, $ionicNavBarDelegate, $http) {
 
   $scope.username;
   $scope.password;
@@ -23,11 +44,17 @@ angular.module('starter.controllers', [])
   $scope.$on("$ionicView.afterEnter", function(event, data){
    // handle event
    $ionicNavBarDelegate.showBar(false);
- });
+  });
+
+  $scope.$on("$ionicView.beforeLeave", function(event, data){
+   // handle event
+   $ionicNavBarDelegate.showBar(false);
+  });
 
   $scope.login = function(username, password){
     console.log(username);
     console.log(password);
+    $state.go('home');
   }
   $scope.setNavTitle = function(title) {
     $ionicNavBarDelegate.title(title);

@@ -9848,11 +9848,13 @@ a.button {
     background-size: 208% 50px;
     background-color: transparent;
     margin-right: 10px;
+    border-color: transparent;
     background-image: url("../img/fb.png"); }
   .login-content .button-area .twitter {
     background-repeat: no-repeat;
     width: calc(50% - 10px);
     height: 50px;
+    border-color: transparent;
     background-size: 108% 50px;
     background-color: transparent;
     background-image: url("../img/twi.png"); }
@@ -9860,6 +9862,10 @@ a.button {
 .bar.bar-positive {
   background-color: rgba(45, 123, 255, 0.87);
   height: 50px; }
+  .bar.bar-positive .title {
+    font-size: 25px;
+    height: 50px;
+    line-height: 51px; }
 
 .has-header {
   top: 50px; }
@@ -9881,17 +9887,19 @@ a.button {
       white-space: nowrap; }
       .home-content .sub-header-area ion-scroll img {
         height: 100px; }
-  .home-content .home-row .col .card {
-    margin: 0; }
-    .home-content .home-row .col .card .program-image {
-      background-size: 80% auto;
-      background-position: 50%;
-      background-repeat: no-repeat;
-      height: 150px;
-      display: inline-block;
-      width: 100%; }
-    .home-content .home-row .col .card h4 {
-      text-align: center; }
-    .home-content .home-row .col .card .program-content {
-      margin: 0 10px;
-      word-break: break-all; }
+  .home-content ion-scroll {
+    height: calc(100% - 124px); }
+    .home-content ion-scroll .home-row .col .card {
+      margin: 0; }
+      .home-content ion-scroll .home-row .col .card .program-image {
+        background-size: 80% auto;
+        background-position: 50%;
+        background-repeat: no-repeat;
+        height: 150px;
+        display: inline-block;
+        width: 100%; }
+      .home-content ion-scroll .home-row .col .card h4 {
+        text-align: center; }
+      .home-content ion-scroll .home-row .col .card .program-content {
+        margin: 0 10px;
+        word-break: break-all; }

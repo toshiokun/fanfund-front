@@ -24,24 +24,28 @@
 		}
 	}
 
-	.home-row{
-		.col{
-			.card{
-				margin: 0;
-				.program-image{
-					background-size: 80% auto;
-					background-position: 50%;
-					background-repeat: no-repeat;
-					height: 150px;
-					display: inline-block;
-					width: 100%;
-				}
-				h4{
-					text-align: center;
-				}
-				.program-content{
-					margin: 0 10px;
-					word-break: break-all;
+	ion-scroll{
+		height: calc(100% - 124px);
+
+		.home-row{
+			.col{
+				.card{
+					margin: 0;
+					.program-image{
+						background-size: 80% auto;
+						background-position: 50%;
+						background-repeat: no-repeat;
+						height: 150px;
+						display: inline-block;
+						width: 100%;
+					}
+					h4{
+						text-align: center;
+					}
+					.program-content{
+						margin: 0 10px;
+						word-break: break-all;
+					}
 				}
 			}
 		}
