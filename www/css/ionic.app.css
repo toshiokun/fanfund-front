@@ -9971,6 +9971,9 @@ a.button {
       .ticket-area .present-data-row .present-data .score-area.point-score-area {
         left: 50%; }
 
+.graph-card {
+  background-color: #FFFAF0; }
+
 .introduce-card ion-list ion-item .program-title {
   font-weight: bold;
   font-size: 30px;
