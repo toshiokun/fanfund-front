@@ -1,5 +1,12 @@
 <ion-view view-title="Timeline">
 	<ion-content>
+		<div class="timeline-segment-area">
+			<ti-segmented-control on-select="buttonClicked($index)" style="width: 400px;">
+				<ti-segmented-control-button class="button-positive" title="'番組紹介'"></ti-segmented-control-button>
+				<ti-segmented-control-button class="button-positive" title="'チケット'" selected></ti-segmented-control-button>
+				<ti-segmented-control-button class="button-positive" title="'番組詳細'"></ti-segmented-control-button>
+			</ti-segmented-control>
+		</div>
 		<program-detail>
 		</program-detail>
 	</ion-content>

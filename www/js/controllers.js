@@ -5,7 +5,7 @@ angular.module('starter.controllers', [])
 .controller('ProgramCtrl', function($scope) {})
 
 .controller('TimelineCtrl', ['$scope',function($scope) {
-    
+
 }])
 
 .component('ticket', {
@@ -30,26 +30,16 @@ angular.module('starter.controllers', [])
 })
 
 .controller('HomeCtrl', ['$scope', '$ionicNavBarDelegate', function($scope, $ionicNavBarDelegate){
-    $scope.$on("$ionicView.afterEnter", function(event, data){
+  $scope.$on("$ionicView.afterEnter", function(event, data){
    // handle event
    $ionicNavBarDelegate.showBar(false);
  });
 }])
 
-.controller('LoginCtrl',['$scope', '$state', '$ionicNavBarDelegate', '$http', function($scope, $state, $ionicNavBarDelegate, $http) {
+.controller('LoginCtrl',['$scope', '$state', '$http', function($scope, $state, $http) {
 
   $scope.username;
   $scope.password;
-
-  $scope.$on("$ionicView.afterEnter", function(event, data){
-   // handle event
-   $ionicNavBarDelegate.showBar(false);
-  });
-
-  $scope.$on("$ionicView.beforeLeave", function(event, data){
-   // handle event
-   $ionicNavBarDelegate.showBar(false);
-  });
 
   $scope.login = function(username, password){
     console.log(username);
