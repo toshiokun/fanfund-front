@@ -9977,6 +9977,30 @@ a.button {
       .ticket-area .present-data-row .present-data .score-area.point-score-area {
         left: 50%; }
 
+.privilage-card ion-item {
+  border-color: transparent;
+  margin-bottom: 10px;
+  white-space: normal; }
+  .privilage-card ion-item .privilage-title {
+    font-size: 30px;
+    font-weight: bold;
+    line-height: initial; }
+  .privilage-card ion-item.item-thumbnail-right {
+    padding-right: 156px;
+    min-height: 156px; }
+    .privilage-card ion-item.item-thumbnail-right img {
+      width: 130px;
+      height: 130px;
+      max-width: 130px;
+      max-height: 130px; }
+
+.privilage-card .content-title {
+  color: #FF4500;
+  font-size: 25px;
+  font-weight: bold;
+  height: 25px;
+  line-height: 25px; }
+
 .graph-card {
   background-color: #FFFAF0; }
   .graph-card .cheer-point {
