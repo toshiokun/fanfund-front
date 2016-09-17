@@ -5,6 +5,7 @@ angular.module('starter.controllers', [])
 .controller('ProgramCtrl', function($scope) {})
 
 .controller('TimelineCtrl', ['$scope',function($scope) {
+  $scope.selectedIndex = 1;
   $scope.buttonClicked = function(index){
       $scope.selectedIndex = index;
       $scope.$apply();
@@ -39,15 +40,25 @@ angular.module('starter.controllers', [])
  });
 }])
 
-.controller('LoginCtrl',['$scope', '$state', '$http', function($scope, $state, $http) {
+.controller('LoginCtrl',['$scope', '$state', 'HttpService', function($scope, $state, httpService) {
 
   $scope.username;
   $scope.password;
 
   $scope.login = function(username, password){
-    console.log(username);
-    console.log(password);
-    $state.go('home');
+    var data = {
+      username: username,
+      password: password
+    }
+    httpService.post("/user/login", data).then(
+      function(data){
+        console.log(data);
+        localStorage["token"] = data.token;
+        $state.go('home');
+      },
+      function(data){
+        console.log(data);
+      });
   }
   $scope.setNavTitle = function(title) {
     $ionicNavBarDelegate.title(title);
