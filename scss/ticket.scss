@@ -8,9 +8,12 @@
 			color: red;
 		}
 		.point-price{
+			.d-point-icon{
+				width: 40px;
+			}
 			height: 50px;
 			font-size: 50px;
-			text-align: right;
+			text-align: left;
 			line-height: 45px;
 		}
 
@@ -28,18 +31,32 @@
 			margin: 0 10%;
 		}
 	}
-	.score-area{
-		font-size: 30px;
-		display: inline-block;
-		width: 48%;
-		text-align: center;
-		position: absolute;
-		bottom: 60px;
-		&.ticket-score-area{
-			left: 0;
-		}
-		&.point-score-area{
-			left: 50%;
+	.present-data-row{
+		margin: 0 10%;
+		.present-data{
+			display: inline-block;
+			width: 49%;
+			border-radius: 10px;
+			border: solid 1px black;
+
+			.present-data-header{
+				background-color: #e6e6e6;
+				text-align: center;
+				height: 30px;
+				line-height: 26px;
+			}
+			.score-area{
+				font-size: 30px;
+				text-align: center;
+				height: 50px;
+				line-height: 45px;
+				&.ticket-score-area{
+					left: 0;
+				}
+				&.point-score-area{
+					left: 50%;
+				}
+			}
 		}
 	}
 }

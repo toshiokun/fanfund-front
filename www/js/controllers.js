@@ -5,7 +5,7 @@ angular.module('starter.controllers', [])
 .controller('ProgramCtrl', function($scope) {})
 
 .controller('TimelineCtrl', ['$scope',function($scope) {
-  $scope.selectedIndex = 1;
+  $scope.selectedIndex = 0;
   $scope.buttonClicked = function(index){
     $scope.selectedIndex = index;
     $scope.$apply();

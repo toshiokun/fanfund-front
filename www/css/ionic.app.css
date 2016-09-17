@@ -9932,8 +9932,10 @@ a.button {
 .ticket-area .item-thumbnail-left .point-price {
   height: 50px;
   font-size: 50px;
-  text-align: right;
+  text-align: left;
   line-height: 45px; }
+  .ticket-area .item-thumbnail-left .point-price .d-point-icon {
+    width: 40px; }
 
 .ticket-area .ticket-count {
   font-size: 30px;
@@ -9947,17 +9949,27 @@ a.button {
     width: 80%;
     margin: 0 10%; }
 
-.ticket-area .score-area {
-  font-size: 30px;
-  display: inline-block;
-  width: 48%;
-  text-align: center;
-  position: absolute;
-  bottom: 60px; }
-  .ticket-area .score-area.ticket-score-area {
-    left: 0; }
-  .ticket-area .score-area.point-score-area {
-    left: 50%; }
+.ticket-area .present-data-row {
+  margin: 0 10%; }
+  .ticket-area .present-data-row .present-data {
+    display: inline-block;
+    width: 49%;
+    border-radius: 10px;
+    border: solid 1px black; }
+    .ticket-area .present-data-row .present-data .present-data-header {
+      background-color: #e6e6e6;
+      text-align: center;
+      height: 30px;
+      line-height: 26px; }
+    .ticket-area .present-data-row .present-data .score-area {
+      font-size: 30px;
+      text-align: center;
+      height: 50px;
+      line-height: 45px; }
+      .ticket-area .present-data-row .present-data .score-area.ticket-score-area {
+        left: 0; }
+      .ticket-area .present-data-row .present-data .score-area.point-score-area {
+        left: 50%; }
 
 .introduce-card ion-list ion-item .program-title {
   font-weight: bold;
