@@ -1,0 +1,28 @@
+.timeline-segment-area{
+	height: 60px;
+	display: flex;
+	align-items: center;
+	background-color: #49c20e;
+
+	.buttons{
+		width: 80%;
+		margin-left: 10%;
+		color: white;
+
+		.button-outline{
+			color: white;
+			line-height: 39px;
+			max-height: 40px;
+			min-height: 40px;
+
+			&.active{
+				background-color: #007b09;
+			}
+		}
+	}
+}
+
+
+.hoge{
+	color: #007b09;
+}

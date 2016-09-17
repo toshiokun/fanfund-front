@@ -9903,3 +9903,23 @@ a.button {
       .home-content ion-scroll .home-row .col .card .program-content {
         margin: 0 10px;
         word-break: break-all; }
+
+.timeline-segment-area {
+  height: 60px;
+  display: flex;
+  align-items: center;
+  background-color: #49c20e; }
+  .timeline-segment-area .buttons {
+    width: 80%;
+    margin-left: 10%;
+    color: white; }
+    .timeline-segment-area .buttons .button-outline {
+      color: white;
+      line-height: 39px;
+      max-height: 40px;
+      min-height: 40px; }
+      .timeline-segment-area .buttons .button-outline.active {
+        background-color: #007b09; }
+
+.hoge {
+  color: #007b09; }
