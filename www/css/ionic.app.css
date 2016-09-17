@@ -9883,6 +9883,9 @@ a.button {
   background-color: #c3f3ff; }
   .home-content .sub-header-area {
     background-color: white; }
+    .home-content .sub-header-area label img {
+      width: 20px;
+      margin-right: 5px; }
     .home-content .sub-header-area ion-scroll {
       white-space: nowrap; }
       .home-content .sub-header-area ion-scroll img {
@@ -9891,13 +9894,13 @@ a.button {
     height: calc(100% - 124px); }
     .home-content ion-scroll .home-row .col .card {
       margin: 0; }
-      .home-content ion-scroll .home-row .col .card .program-image {
-        background-size: 80% auto;
-        background-position: 50% 20px;
-        background-repeat: no-repeat;
-        height: 200px;
+      .home-content ion-scroll .home-row .col .card .program-image-area {
         display: inline-block;
         width: 100%; }
+        .home-content ion-scroll .home-row .col .card .program-image-area img {
+          width: 80%;
+          margin: 0 auto;
+          display: block; }
       .home-content ion-scroll .home-row .col .card h4 {
         text-align: center; }
       .home-content ion-scroll .home-row .col .card .program-content {
@@ -9944,6 +9947,12 @@ a.button {
   font-size: 30px;
   text-align: center; }
 
+.ticket-area .option-item {
+  background-color: #6e6e6e;
+  color: white;
+  text-align: center;
+  font-size: 20px; }
+
 .ticket-area .ticket-action-button {
   width: 100%;
   margin: 15px 0; }
@@ -9977,6 +9986,18 @@ a.button {
       .ticket-area .present-data-row .present-data .score-area.point-score-area {
         left: 50%; }
 
+.animate-slide.ng-enter, .animate-slide.ng-leave {
+  transition: all 0.5s linear; }
+
+.animate-slide.ng-enter {
+  max-height: 0; }
+
+.animate-slide.ng-enter.ng-enter-active, .animate-slide.ng-leave {
+  max-height: 500px; }
+
+.animate-slide.ng-leave.ng-leave-active {
+  max-height: 0; }
+
 .privilage-card ion-item {
   border-color: transparent;
   margin-bottom: 10px;
@@ -9998,7 +10019,7 @@ a.button {
   color: #FF4500;
   font-size: 25px;
   font-weight: bold;
-  height: 25px;
+  min-height: 25px;
   line-height: 25px; }
 
 .graph-card {

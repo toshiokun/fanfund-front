@@ -15,7 +15,11 @@ angular.module('starter.controllers', [])
 
 .component('ticket', {
   templateUrl: 'templates/ticket.html',
-  controller: [function(){
+  controller: ['$scope', function($scope){
+    $scope.slide = false;
+    $scope.changeSlide = function(){
+      $scope.slide = !$scope.slide;
+    }
   }]
 })
 
@@ -90,6 +94,8 @@ angular.module('starter.controllers', [])
     }
     $http.post("http://localhost:8000/api/v1/user/login", data).success(function(data){
       console.log(data);
+      localStorage["token"] = data.token;
+      $state.go('home');
     }).error(function(data){
       console.log(data);
     })  

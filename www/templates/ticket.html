@@ -16,6 +16,12 @@
 		<ion-item class="ticket-count">
 			0枚
 		</ion-item>
+		<ion-item class="option-item" on-tap="changeSlide()">
+			 ▼オプション
+		</ion-item>
+		<ion-item class="animate-slide" ng-if="slide">
+		オプション追加用
+		</ion-item>
 	</ion-list>
 	<div class="ticket-action-button">
 		<button class="button button-assertive">

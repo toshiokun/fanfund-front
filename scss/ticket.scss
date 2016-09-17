@@ -1,5 +1,4 @@
 .ticket-area{
-	
 	ion-item{
 		border-color: transparent;
 	}
@@ -22,6 +21,12 @@
 	.ticket-count{
 		font-size: 30px;
 		text-align: center;
+	}
+	.option-item{
+		background-color: #6e6e6e;
+		color: white;
+		text-align: center;
+		font-size: 20px;
 	}
 	.ticket-action-button{
 		width: 100%;
@@ -63,4 +68,24 @@
 			}
 		}
 	}
+}
+
+.animate-slide {
+  &.ng-enter,
+  &.ng-leave {
+    transition: all 0.5s linear;
+  }
+  
+  &.ng-enter {
+    max-height: 0;
+  }
+  
+  &.ng-enter.ng-enter-active,
+  &.ng-leave {
+    max-height: 500px;
+  }
+  
+  &.ng-leave.ng-leave-active {
+    max-height: 0;
+  }
 }

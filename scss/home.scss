@@ -16,6 +16,12 @@
 
 	.sub-header-area{
 		background-color: white;
+		label{
+			img{
+				width: 20px;
+				margin-right: 5px;
+			}
+		}
 		ion-scroll{
 			white-space: nowrap;
 			img{
@@ -31,13 +37,14 @@
 			.col{
 				.card{
 					margin: 0;
-					.program-image{
-						background-size: 80% auto;
-						background-position: 50% 20px;
-						background-repeat: no-repeat;
-						height: 200px;
+					.program-image-area{
 						display: inline-block;
 						width: 100%;
+						img{
+							width: 80%;
+							margin: 0 auto;
+							display: block;
+						}
 					}
 					h4{
 						text-align: center;
