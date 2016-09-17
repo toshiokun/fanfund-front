@@ -9973,6 +9973,23 @@ a.button {
 
 .graph-card {
   background-color: #FFFAF0; }
+  .graph-card .cheer-point {
+    color: red;
+    font-size: 30px;
+    font-weight: bold;
+    height: 40px;
+    margin-left: 20px; }
+  .graph-card .cheer-point-number {
+    text-align: center;
+    color: red;
+    height: 30px;
+    font-size: 25px; }
+  .graph-card .row .col {
+    text-align: center; }
+    .graph-card .row .col .header {
+      font-size: 11px; }
+    .graph-card .row .col .content {
+      font-size: 30px; }
 
 .introduce-card ion-list ion-item .program-title {
   font-weight: bold;

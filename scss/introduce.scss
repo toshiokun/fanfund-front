@@ -1,5 +1,29 @@
 .graph-card{
 	background-color: #FFFAF0;
+	.cheer-point{
+		color: red;
+		font-size: 30px;
+		font-weight: bold;
+		height: 40px;
+		margin-left: 20px;
+	}
+	.cheer-point-number{
+		text-align: center;
+		color: red;
+		height: 30px;
+		font-size: 25px;
+	}
+	.row{
+		.col{
+			text-align: center;
+			.header{
+				font-size: 11px;
+			}
+			.content{
+				font-size: 30px;
+			}
+		}
+	}
 }
 .introduce-card{
 	ion-list{

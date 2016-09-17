@@ -96,9 +96,11 @@ angular.module('starter.controllers', [])
       identify: username,
       password: password
     }
-    $http.post("http://localhost:8000/user/login", {data: data}, function(data){
-
-    })
+    $http.post("http://localhost:8000/api/v1/user/login", data).success(function(data){
+      console.log(data);
+    }).error(function(data){
+      console.log(data);
+    })  
   }
   $scope.setNavTitle = function(title) {
     $ionicNavBarDelegate.title(title);
