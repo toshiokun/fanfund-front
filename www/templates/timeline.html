@@ -1,21 +1,21 @@
-<ion-view view-title="Timeline">
+<ion-view view-title="Fan×Fund">
 	<ion-content class="timeline-content">
 		<div class="timeline-segment-area">
 			<ti-segmented-control on-select="buttonClicked($index)">
-				<ti-segmented-control-button class="button-positive" title="'番組紹介'"></ti-segmented-control-button>
 				<ti-segmented-control-button class="button-positive" title="'チケット'" selected></ti-segmented-control-button>
-				<ti-segmented-control-button class="button-positive" title="'番組詳細'"></ti-segmented-control-button>
+				<ti-segmented-control-button class="button-positive" title="'チケット特典'"></ti-segmented-control-button>
+				<ti-segmented-control-button class="button-positive" title="'番組紹介'"></ti-segmented-control-button>
 			</ti-segmented-control>
 		</div>
-		<div class="program-detail-content" ng-if="selectedIndex === 0">
-			<program-detail>
-			</program-detail>
-		</div>
-		<div class="ticket-content" ng-if="selectedIndex === 2">
+		<div class="ticket-content" ng-if="selectedIndex === 0">
 			<ticket>
 			</ticket>
 		</div>
-		<div class="introduce-content" ng-if="selectedIndex === 1">
+		<div class="program-detail-content" ng-if="selectedIndex === 1">
+			<privilage>
+			</privilage>
+		</div>
+		<div class="introduce-content" ng-if="selectedIndex === 2">
 			<introduce>
 			</introduce>
 		</div>

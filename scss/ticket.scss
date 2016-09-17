@@ -28,21 +28,6 @@
 			margin: 0 10%;
 		}
 	}
-	.my-area{
-		display: inline-flex;
-		justify-content: center;
-		background-repeat: no-repeat;
-		height: 200px;
-		background-size: 75%;
-		width: 48%;
-		background-position: 50% 40px;
-		&.my-ticket-area{
-			background-image: url("../img/ticket.png");
-		}
-		&.my-point-area{
-			background-image: url("../img/point.png");
-		}
-	}
 	.score-area{
 		font-size: 30px;
 		display: inline-block;

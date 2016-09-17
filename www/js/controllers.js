@@ -15,7 +15,6 @@ angular.module('starter.controllers', [])
 .component('ticket', {
   templateUrl: 'templates/ticket.html',
   controller: [function(){
-
   }]
 })
 
@@ -103,8 +102,8 @@ angular.module('starter.controllers', [])
   }]
 })
 
-.component('programDetail', {
-  templateUrl: 'templates/detail.html',
+.component('privilage', {
+  templateUrl: 'templates/privilage.html',
   controller: [function(){
 
   }]

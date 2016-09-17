@@ -9947,19 +9947,6 @@ a.button {
     width: 80%;
     margin: 0 10%; }
 
-.ticket-area .my-area {
-  display: inline-flex;
-  justify-content: center;
-  background-repeat: no-repeat;
-  height: 200px;
-  background-size: 75%;
-  width: 48%;
-  background-position: 50% 40px; }
-  .ticket-area .my-area.my-ticket-area {
-    background-image: url("../img/ticket.png"); }
-  .ticket-area .my-area.my-point-area {
-    background-image: url("../img/point.png"); }
-
 .ticket-area .score-area {
   font-size: 30px;
   display: inline-block;
