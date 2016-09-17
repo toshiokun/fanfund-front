@@ -38,6 +38,48 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
     controller: 'LoginCtrl'
   })
 
+  .state('home', {
+    url: '/home',
+    templateUrl: 'templates/home.html',
+    controller: 'HomeCtrl'
+  })
+
+  .state('timeline', {
+    url: '/timeline',
+    templateUrl: 'templates/timeline.html',
+    controller: 'TimelineCtrl'
+  })
+
+  .state('timeline.introduce', {
+    url: '/introduce',
+    views: {
+      'timeline-introduce': {
+        templateUrl: 'templates/introduce.html',
+        controller: 'IntroduceCtrl'
+      }
+    }
+  })
+
+  .state('timeline.ticket', {
+    url: '/ticket',
+    views: {
+      'timeline-ticket': {
+        templateUrl: 'templates/ticket.html',
+        controller: 'TicketCtrl'
+      }
+    }
+  })
+
+  .state('timeline.detail', {
+    url: '/detail',
+    views: {
+      'timeline-detail': {
+        templateUrl: 'templates/detail.html',
+        controller: 'DetailCtrl'
+      }
+    }
+  })
+
   .state('hoge', {
     url: '/program-list',
     templateUrl: 'templates/program-list.html',

@@ -1,0 +1,49 @@
+.home-header{
+	.title{
+		font-size: 30px;
+	}
+	.button{
+		border-color: transparent;
+		background-color: transparent;
+		.ion-search:before{
+			font-size: 40px;
+		}
+	}
+}
+
+.home-content{
+	background-color: #c3f3ff;
+
+	.sub-header-area{
+		background-color: white;
+		ion-scroll{
+			white-space: nowrap;
+			img{
+				height: 100px;
+			}
+		}
+	}
+
+	.home-row{
+		.col{
+			.card{
+				margin: 0;
+				.program-image{
+					background-size: 80% auto;
+					background-position: 50%;
+					background-repeat: no-repeat;
+					height: 150px;
+					display: inline-block;
+					width: 100%;
+				}
+				h4{
+					text-align: center;
+				}
+				.program-content{
+					margin: 0 10px;
+					word-break: break-all;
+				}
+			}
+		}
+	}
+}

@@ -4,7 +4,18 @@ angular.module('starter.controllers', [])
 
 .controller('ProgramCtrl', function($scope) {})
 
-.controller('LoginCtrl',['$scope', '$ionicNavBarDelegate', function($scope, $ionicNavBarDelegate) {
+.controller('TimelineCtrl', ['$scope', function($scope) {
+
+}])
+
+.controller('HomeCtrl', ['$scope', '$ionicNavBarDelegate', function($scope, $ionicNavBarDelegate){
+    $scope.$on("$ionicView.afterEnter", function(event, data){
+   // handle event
+   $ionicNavBarDelegate.showBar(false);
+ });
+}])
+
+.controller('LoginCtrl',['$scope', '$ionicNavBarDelegate', '$http', function($scope, $ionicNavBarDelegate, $http) {
 
   $scope.username;
   $scope.password;
