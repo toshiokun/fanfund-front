@@ -8,8 +8,8 @@
 		background-color: #49c20e;
 
 		.buttons{
-			width: 80%;
-			margin-left: 10%;
+			width: 92%;
+			margin-left: 4%;
 			color: white;
 
 			.button-outline{
@@ -23,5 +23,8 @@
 				}
 			}
 		}
+	}
+	ion-scroll{
+		height: calc(100% - 60px);
 	}
 }

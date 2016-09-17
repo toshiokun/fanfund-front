@@ -6,6 +6,7 @@
 	.item-thumbnail-left{
 		.cheer-number{
 			color: red;
+			white-space: normal;
 		}
 		.point-price{
 			.d-point-icon{
@@ -36,20 +37,23 @@
 		.present-data{
 			display: inline-block;
 			width: 49%;
-			border-radius: 10px;
-			border: solid 1px black;
+			background-repeat: no-repeat;
+			background-size: auto 110%;
+			background-image: url("../img/bluewhitebox.png");
 
 			.present-data-header{
-				background-color: #e6e6e6;
+				background-color: transparent;
 				text-align: center;
 				height: 30px;
-				line-height: 26px;
+				line-height: 40px;
 			}
 			.score-area{
+				color: white;
 				font-size: 30px;
 				text-align: center;
 				height: 50px;
-				line-height: 45px;
+				line-height: 55px;
+				background-color: transparent;
 				&.ticket-score-area{
 					left: 0;
 				}

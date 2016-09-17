@@ -9912,8 +9912,8 @@ a.button {
     align-items: center;
     background-color: #49c20e; }
     .timeline-content .timeline-segment-area .buttons {
-      width: 80%;
-      margin-left: 10%;
+      width: 92%;
+      margin-left: 4%;
       color: white; }
       .timeline-content .timeline-segment-area .buttons .button-outline {
         color: white;
@@ -9922,12 +9922,15 @@ a.button {
         min-height: 40px; }
         .timeline-content .timeline-segment-area .buttons .button-outline.active {
           background-color: #007b09; }
+  .timeline-content ion-scroll {
+    height: calc(100% - 60px); }
 
 .ticket-area ion-item {
   border-color: transparent; }
 
 .ticket-area .item-thumbnail-left .cheer-number {
-  color: red; }
+  color: red;
+  white-space: normal; }
 
 .ticket-area .item-thumbnail-left .point-price {
   height: 50px;
@@ -9954,18 +9957,21 @@ a.button {
   .ticket-area .present-data-row .present-data {
     display: inline-block;
     width: 49%;
-    border-radius: 10px;
-    border: solid 1px black; }
+    background-repeat: no-repeat;
+    background-size: auto 110%;
+    background-image: url("../img/bluewhitebox.png"); }
     .ticket-area .present-data-row .present-data .present-data-header {
-      background-color: #e6e6e6;
+      background-color: transparent;
       text-align: center;
       height: 30px;
-      line-height: 26px; }
+      line-height: 40px; }
     .ticket-area .present-data-row .present-data .score-area {
+      color: white;
       font-size: 30px;
       text-align: center;
       height: 50px;
-      line-height: 45px; }
+      line-height: 55px;
+      background-color: transparent; }
       .ticket-area .present-data-row .present-data .score-area.ticket-score-area {
         left: 0; }
       .ticket-area .present-data-row .present-data .score-area.point-score-area {

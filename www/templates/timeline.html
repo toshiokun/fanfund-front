@@ -1,5 +1,5 @@
 <ion-view view-title="Fan×Fund">
-	<ion-content class="timeline-content">
+	<ion-content class="timeline-content" scroll="false">
 		<div class="timeline-segment-area">
 			<ti-segmented-control on-select="buttonClicked($index)">
 				<ti-segmented-control-button class="button-positive" title="'チケット'" selected></ti-segmented-control-button>
@@ -7,6 +7,7 @@
 				<ti-segmented-control-button class="button-positive" title="'番組紹介'"></ti-segmented-control-button>
 			</ti-segmented-control>
 		</div>
+		<ion-scroll direction="y">
 		<div class="ticket-content" ng-if="selectedIndex === 0">
 			<ticket>
 			</ticket>
@@ -19,5 +20,6 @@
 			<introduce>
 			</introduce>
 		</div>
+		</ion-scroll>
 	</ion-content>
 </ion-view>
