@@ -9904,25 +9904,24 @@ a.button {
         margin: 0 10px;
         word-break: break-all; }
 
-.timeline-segment-area {
-  height: 60px;
-  display: flex;
-  align-items: center;
-  background-color: #49c20e; }
-  .timeline-segment-area .buttons {
-    width: 80%;
-    margin-left: 10%;
-    color: white; }
-    .timeline-segment-area .buttons .button-outline {
-      color: white;
-      line-height: 39px;
-      max-height: 40px;
-      min-height: 40px; }
-      .timeline-segment-area .buttons .button-outline.active {
-        background-color: #007b09; }
-
-.hoge {
-  color: #007b09; }
+.timeline-content {
+  background-color: #c3f3ff; }
+  .timeline-content .timeline-segment-area {
+    height: 60px;
+    display: flex;
+    align-items: center;
+    background-color: #49c20e; }
+    .timeline-content .timeline-segment-area .buttons {
+      width: 80%;
+      margin-left: 10%;
+      color: white; }
+      .timeline-content .timeline-segment-area .buttons .button-outline {
+        color: white;
+        line-height: 39px;
+        max-height: 40px;
+        min-height: 40px; }
+        .timeline-content .timeline-segment-area .buttons .button-outline.active {
+          background-color: #007b09; }
 
 .ticket-area ion-item {
   border-color: transparent; }
@@ -9972,3 +9971,12 @@ a.button {
     left: 0; }
   .ticket-area .score-area.point-score-area {
     left: 50%; }
+
+.introduce-card ion-list ion-item .program-title {
+  font-weight: bold;
+  font-size: 30px;
+  line-height: normal; }
+
+.introduce-card .program-content {
+  white-space: normal;
+  margin: 0 10px; }

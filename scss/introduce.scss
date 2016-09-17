@@ -1,0 +1,15 @@
+.introduce-card{
+	ion-list{
+		ion-item{
+			.program-title{
+				font-weight: bold;
+				font-size: 30px;
+				line-height: normal;
+			}
+		}
+	}
+	.program-content{
+		white-space: normal;
+		margin: 0 10px;
+	}
+}

@@ -1,28 +1,27 @@
-.timeline-segment-area{
-	height: 60px;
-	display: flex;
-	align-items: center;
-	background-color: #49c20e;
+.timeline-content{
+	background-color: #c3f3ff;
 
-	.buttons{
-		width: 80%;
-		margin-left: 10%;
-		color: white;
+	.timeline-segment-area{
+		height: 60px;
+		display: flex;
+		align-items: center;
+		background-color: #49c20e;
 
-		.button-outline{
+		.buttons{
+			width: 80%;
+			margin-left: 10%;
 			color: white;
-			line-height: 39px;
-			max-height: 40px;
-			min-height: 40px;
 
-			&.active{
-				background-color: #007b09;
+			.button-outline{
+				color: white;
+				line-height: 39px;
+				max-height: 40px;
+				min-height: 40px;
+
+				&.active{
+					background-color: #007b09;
+				}
 			}
 		}
 	}
-}
-
-
-.hoge{
-	color: #007b09;
 }
