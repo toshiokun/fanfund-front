@@ -1,0 +1,31 @@
+.privilage-card{
+	ion-item{
+		border-color: transparent;
+		margin-bottom: 10px;
+		white-space: normal;
+
+		.privilage-title{
+			font-size: 30px;
+			font-weight: bold;
+			line-height: initial;
+		}
+		&.item-thumbnail-right{
+			padding-right: 156px;
+			min-height: 156px;
+
+			img{
+				width: 130px;
+				height: 130px;
+				max-width: 130px;
+				max-height: 130px;
+			}
+		}
+	}
+	.content-title{
+		color: #FF4500;
+		font-size: 25px;
+		font-weight: bold;
+		height: 25px;
+		line-height:25px;
+	}
+}
