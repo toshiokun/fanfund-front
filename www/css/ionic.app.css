@@ -10051,6 +10051,19 @@ a.button {
       font-size: 11px; }
     .graph-card .row .col .content {
       font-size: 30px; }
+  .graph-card .yellow-title {
+    margin-left: 10px;
+    text-align: left;
+    color: #ffa800;
+    font-size: 20px;
+    height: 30px;
+    font-weight: bold; }
+  .graph-card .yellow-point-title {
+    text-align: center;
+    color: #ffa800;
+    font-size: 30px;
+    font-weight: bold;
+    height: 40px; }
 
 .introduce-card ion-list ion-item {
   border-color: transparent; }

@@ -52,7 +52,8 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
   .state('timeline', {
     url: '/timeline',
     templateUrl: 'templates/timeline.html',
-    controller: 'TimelineCtrl'
+    controller: 'TimelineCtrl',
+    params: {programId: 1}
   })
 
   .state('hoge', {

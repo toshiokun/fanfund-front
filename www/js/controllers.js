@@ -4,13 +4,13 @@ angular.module('starter.controllers', [])
 
 .controller('ProgramCtrl', function($scope) {})
 
-.controller('TimelineCtrl', ['$scope', '$ionicScrollDelegate', 'HttpService', function($scope, $ionicScrollDelegate, httpService) {
+.controller('TimelineCtrl', ['$scope', '$ionicScrollDelegate', '$stateParams', 'HttpService', function($scope, $ionicScrollDelegate, $stateParams, httpService) {
   $scope.$on("$ionicView.afterEnter", function(event, data){
    // handle event
    $scope.price = 320;
-   var programId = 1;
-   httpService.getProgramDetail(programId, function(data){
+   httpService.getProgramDetail($stateParams.programId, function(data){
     console.log(data);
+    $scope.program = data.data;
   }, function(data){
     console.log(data);
   });
@@ -127,8 +127,8 @@ angular.module('starter.controllers', [])
   });
    $ionicNavBarDelegate.showBar(false);
  });
-  $scope.goTo = function(){
-    $state.go('timeline');
+  $scope.goToTimeline = function(programId){
+    $state.go('timeline', {programId: programId});
   }
 }])
 
