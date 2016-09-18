@@ -4,7 +4,7 @@
 		総応援ポイント
 	</div>
 	<div class="cheer-point-number">
-		364364810P
+		{{$ctrl.sum_price}}P
 	</div>
 	<div class="row">
 		<span class="col">
@@ -12,7 +12,7 @@
 				応援ユーザー数
 			</div>
 			<div class="content">
-				1000
+				{{$ctrl.users}}
 			</div>
 		</span>
 		<span class="col">
@@ -20,7 +20,7 @@
 				現在のチケット価格
 			</div>
 			<div class="content">
-				931
+				{{$ctrl.program.now_price}}
 			</div>
 		</span>
 		<span class="col">
@@ -28,7 +28,7 @@
 				総チケット数
 			</div>
 			<div class="content">
-				893
+				{{$ctrl.stock}}
 			</div>
 		</span>
 	</div>
@@ -44,18 +44,11 @@
 		<ion-item class="item-thumbnail-left">
 			<img src="img/ousama.png">
 			<div class="program-title">
-				王様のブランチ
-			</div>
-			<div class="cast-list">
-				<strong>キャスト</strong>
-				谷原章介 新川優愛
+				{{$ctrl.program.name}}
 			</div>
 		</ion-item>
-
 		<div class="program-content">
-			週末の強い味方！お出かけ情報から、グルメ、映画のランキング、最新エンタメ情報まで！
-
-			毎日土曜朝9:00から『王様のブランチ』
+			{{$ctrl.program.name.program_info.description}}
 		</div>
 		<div class="program-image">
 			<img src="img/tanihara.png">
@@ -72,13 +65,13 @@
 		<ion-item class="item-thumbnail-left dot-thumbnail">
 			<img src="img/purple-dot.png">
 			<div class="introduce-content-header">
-				最近の放送
+				次回の放送
 			</div>
 			<div class="introduce-content-content">
 				<div class="recent-content-date">
 					2016/9/17
 				</div>
-				佐藤健が「読書LOVERS」に登場！愛してやまない本３作品を紹介
+				{{$ctrl.program.program_info.next_description}}
 			</div>
 		</ion-item>
 	</ion-list>

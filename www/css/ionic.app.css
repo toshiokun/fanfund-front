@@ -9956,7 +9956,8 @@ a.button {
     font-size: 30px;
     width: 200px;
     text-align: center;
-    display: inline; }
+    display: inline;
+    padding: 0; }
 
 .ticket-area .option-item {
   background-color: #6e6e6e;
@@ -10027,6 +10028,11 @@ a.button {
       height: 130px;
       max-width: 130px;
       max-height: 130px; }
+
+.privilage-card .point-title button {
+  margin: 10px auto;
+  display: block;
+  width: 80%; }
 
 .privilage-card .content-title {
   color: #FF4500;

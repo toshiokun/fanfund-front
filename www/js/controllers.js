@@ -14,6 +14,18 @@ angular.module('starter.controllers', [])
   }, function(data){
     console.log(data);
   });
+   httpService.countUsers($stateParams.programId, function(data){
+    console.log(data);
+    $scope.users = data.count;
+  }, function(data){
+    console.log(data);
+  });
+   httpService.countStock($stateParams.programId, function(data){
+    $scope.stock = data.count;
+    console.log(data);
+  }, function(data){
+    console.log(data);
+  });
  })
   $scope.selectedIndex = 0;
   $scope.buttonClicked = function(index){
@@ -74,8 +86,17 @@ angular.module('starter.controllers', [])
 })
 
 .component('introduce', {
+  bindings: {
+    program: '<',
+    users: '<',
+    stock: '<'
+  },
   templateUrl: 'templates/introduce.html',
   controller: ['$scope', function($scope){
+    var ctrl = this;
+    console.log(this.stock);
+    console.log(this.program.now_price);
+    ctrl.sum_price = this.stock * this.program.now_price;
     $scope.options = {
       chart: {
         type: 'lineChart',
@@ -125,9 +146,12 @@ angular.module('starter.controllers', [])
 })
 
 .component('privilage', {
+  bindings: {
+    program: '<'
+  },
   templateUrl: 'templates/privilage.html',
-  controller: [function(){
-
+  controller: ['$scope', function($scope){
+    var ctrl = this;
   }]
 })
 

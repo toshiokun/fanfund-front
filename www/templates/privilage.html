@@ -6,24 +6,27 @@
 				応援特典
 			</div>
 		</ion-item>
+		<div class="point-title">
+			<button class="button button-positive">
+				ポイントを貯める
+			</button>
+		</div>
 		<div class="content-title">
-			番組観覧
+			一般特典
 		</div>
 		<ion-item class="item-thumbnail-right">
 			<img src="img/tanihara.png">
 			<div class="privilage-content">
-				番組の撮影現場に！！番組終了時にはMCの谷原章介との写真撮影も！！
+				{{$ctrl.program.program_info.privilege_1}}
 			</div>
 		</ion-item>
 		<div class="content-title">
-			番組紹介グッズをプレゼント
+			特別特典
 		</div>
 		<ion-item class="item-thumbnail-right">
 			<img src="img/layer.png">
 			<div class="privilage-content">
-			書籍紹介ランキング第１位
-
-			朝井リョウの「何様」をMCの新川のサイン入りでプレゼント！
+				{{$ctrl.program.program_info.privilege_2}}
 			</div>
 		</ion-item>
 	</ion-list>

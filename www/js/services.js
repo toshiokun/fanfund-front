@@ -19,9 +19,16 @@ angular.module('starter.services', [])
       console.log({"number": number, "price": price, "type": "limit"});
       $http.post(rootUrl + "/api/v1/programs" + "/" + programId + "/buylist?token=" + localStorage["token"], {"number": number, "price": price, "type": "limit"}).success(onSuccess).error(onFailed);
     },
-    sellTicket: function(){
-      $http.post(rootUrl + "/api/v1/programs" + "/" + programId + "/selelist?token=" + localStorage["token"], {"number": number, "price": price, "type": "limit"}).success(onSuccess).error(onFailed);
+    sellTicket: function(programId, number, price, onSuccess, onFailed){
+      $http.get(rootUrl + "/api/v1/programs" + "/" + programId + "/salelist?token=" + localStorage["token"], {"number": number, "price": price, "type": "limit"}).success(onSuccess).error(onFailed);
+    },
+    countStock: function(programId, onSuccess, onFailed){
+      $http.get(rootUrl + "/api/v1/programs" + "/" + programId + "/stocks/count?token=" + localStorage["token"]).success(onSuccess).error(onFailed);
+    },
+    countUsers: function(programId, onSuccess, onFailed){
+      $http.get(rootUrl + "/api/v1/programs" + "/" + programId + "/stocks/count/user?token=" + localStorage["token"]).success(onSuccess).error(onFailed);
     }
+
   }
 }])
 .factory('Chats', function() {
