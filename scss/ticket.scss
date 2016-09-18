@@ -11,16 +11,26 @@
 			.d-point-icon{
 				width: 40px;
 			}
+			border: transparent;
 			height: 50px;
 			font-size: 50px;
 			text-align: left;
 			line-height: 45px;
+			input{
+				font-size: 30px;
+			}
 		}
 
 	}
 	.ticket-count{
 		font-size: 30px;
 		text-align: center;
+		input{
+			font-size: 30px;
+			width: 200px;
+			text-align: center;
+			display: inline;
+		}
 	}
 	.option-item{
 		background-color: #6e6e6e;

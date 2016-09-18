@@ -8,19 +8,19 @@
 			<div class="product-name">
 				王様ブランチ応援チケット
 			</div>
-			<div class="point-price">
+			<div class="point-price item item-input">
 				<img class="d-point-icon" src="img/d-point.png">
-				320
+				<input type="number" ng-model="price" ng-init="price = 320">	
 			</div>
 		</ion-item>
 		<ion-item class="ticket-count">
-			0枚
+			<input type="number" ng-model="number" ng-init="number = 0">
 		</ion-item>
 		<ion-item class="option-item" on-tap="changeSlide()">
-			 ▼オプション
+			▼オプション
 		</ion-item>
 		<ion-item class="animate-slide" ng-if="slide">
-		オプション追加用
+			オプション追加用
 		</ion-item>
 	</ion-list>
 	<div class="ticket-action-button">

@@ -1,36 +1,23 @@
 angular.module('starter.services', [])
 
-.constant('RootUrl', "localhost:8000")
+.constant('RootUrl', "http://localhost:8000")
 
-.service('HttpService',['$resource', 'RootUrl', function($resource, rootUrl){
+.service('HttpService',['$http', 'RootUrl', function($http, rootUrl){
   return {
-    resource: function(url, data){
-      if (localStorage["token"] === ""){
-        return $resource(rootUrl +  url,　{}, {
-          post: {
-            method: 'POST'
-          },
-          get : {
-            method: 'GET'
-          }
-        })      
-      } else {
-        return $resource(rootUrl +  url + "?token=" + localStorage["token"],　data, {
-          post: {
-            method: 'POST'
-          },
-          get : {
-            method: 'GET'
-          }
-        })
+    login: function(data, onSuccess, onFailed){
+      $http.post(rootUrl + "/api/v1/user/login", data).success(onSuccess).error(onFailed);
+    },
+    getPrograms: function(onSuccess, onFailed){
+      $http.get(rootUrl + "/api/v1/programs" + "?token=" + localStorage["token"]).success(onSuccess).error(onFailed);
+    },
+    getProgramDetail: function(programId, onSuccess, onFailed){
+      $http.get(rootUrl + "/api/v1/programs" + "/" + programId + "?token=" + localStorage["token"])
+      .success(onSuccess)
+      .error(onFailed);
     }
-  },
-    hoge: function(){
-      console.log(rootUrl);
-      console.log(localStorage["token"]);
-    }
-    }}])
-        .factory('Chats', function() {
+  }
+}])
+.factory('Chats', function() {
   // Might use a resource here that returns a JSON array
 
   // Some fake testing data

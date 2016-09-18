@@ -4,7 +4,17 @@ angular.module('starter.controllers', [])
 
 .controller('ProgramCtrl', function($scope) {})
 
-.controller('TimelineCtrl', ['$scope', '$ionicScrollDelegate', function($scope, $ionicScrollDelegate) {
+.controller('TimelineCtrl', ['$scope', '$ionicScrollDelegate', 'HttpService', function($scope, $ionicScrollDelegate, httpService) {
+  $scope.$on("$ionicView.afterEnter", function(event, data){
+   // handle event
+   $scope.price = 320;
+   var programId = 1;
+   httpService.getProgramDetail(programId, function(data){
+    console.log(data);
+  }, function(data){
+    console.log(data);
+  });
+ })
   $scope.selectedIndex = 0;
   $scope.buttonClicked = function(index){
     $scope.selectedIndex = index;
@@ -15,7 +25,7 @@ angular.module('starter.controllers', [])
 
 .component('ticket', {
   templateUrl: 'templates/ticket.html',
-  controller: ['$scope', function($scope){
+  controller: ['$scope', function($scope, $ionicPopup){
     $scope.slide = false;
     $scope.changeSlide = function(){
       $scope.slide = !$scope.slide;
@@ -81,9 +91,15 @@ angular.module('starter.controllers', [])
   }]
 })
 
-.controller('HomeCtrl', ['$scope', '$ionicNavBarDelegate', '$state', function($scope, $ionicNavBarDelegate, $state){
+.controller('HomeCtrl', ['$scope', '$ionicNavBarDelegate', '$state', 'HttpService', function($scope, $ionicNavBarDelegate, $state, httpService){
   $scope.$on("$ionicView.afterEnter", function(event, data){
    // handle event
+   httpService.getPrograms(function(data){
+    $scope.programs = data.data;
+    console.log(data);
+  }, function(data){
+    console.log(data);
+  });
    $ionicNavBarDelegate.showBar(false);
  });
   $scope.goTo = function(){
@@ -101,11 +117,11 @@ angular.module('starter.controllers', [])
       identify: username,
       password: password
     }
-    $http.post("http://localhost:8000/api/v1/user/login", data).success(function(data){
+    httpService.login(data, function(data){
       console.log(data);
       localStorage["token"] = data.token;
       $state.go('home');
-    }).error(function(data){
+    }, function(data){
       console.log(data);
       localStorage["token"] = data.token;
       $state.go('home');

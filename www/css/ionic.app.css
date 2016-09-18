@@ -9893,7 +9893,7 @@ a.button {
   .home-content ion-scroll {
     height: calc(100% - 124px); }
     .home-content ion-scroll .home-row .col .card {
-      margin: 0; }
+      margin: 10px 0; }
       .home-content ion-scroll .home-row .col .card .program-image-area {
         display: inline-block;
         width: 100%; }
@@ -9936,16 +9936,24 @@ a.button {
   white-space: normal; }
 
 .ticket-area .item-thumbnail-left .point-price {
+  border: transparent;
   height: 50px;
   font-size: 50px;
   text-align: left;
   line-height: 45px; }
   .ticket-area .item-thumbnail-left .point-price .d-point-icon {
     width: 40px; }
+  .ticket-area .item-thumbnail-left .point-price input {
+    font-size: 30px; }
 
 .ticket-area .ticket-count {
   font-size: 30px;
   text-align: center; }
+  .ticket-area .ticket-count input {
+    font-size: 30px;
+    width: 200px;
+    text-align: center;
+    display: inline; }
 
 .ticket-area .option-item {
   background-color: #6e6e6e;
