@@ -14,6 +14,12 @@ angular.module('starter.services', [])
       $http.get(rootUrl + "/api/v1/programs" + "/" + programId + "?token=" + localStorage["token"])
       .success(onSuccess)
       .error(onFailed);
+    },
+    buyTicket: function(programId, number, price, onSuccess, onFailed){
+      $http.post(rootUrl + "/api/v1/programs" + "/" + programId + "buylist?token=" + localStorage["token"], {"number": number, "price": price, "type": "limit"}).success(onSuccess).error(onFailed);
+    },
+    sellTicket: function(){
+      $http.post(rootUrl + "/api/v1/programs" + "/" + programId + "selelist?token=" + localStorage["token"], {"number": number, "price": price, "type": "limit"}).success(onSuccess).error(onFailed);
     }
   }
 }])

@@ -9938,7 +9938,7 @@ a.button {
 .ticket-area .item-thumbnail-left .point-price {
   border: transparent;
   height: 50px;
-  font-size: 50px;
+  font-size: 40px;
   text-align: left;
   line-height: 45px; }
   .ticket-area .item-thumbnail-left .point-price .d-point-icon {
@@ -9947,8 +9947,8 @@ a.button {
     font-size: 30px; }
 
 .ticket-area .ticket-count {
-  font-size: 30px;
-  text-align: center; }
+  font-size: 20px;
+  text-align: right; }
   .ticket-area .ticket-count input {
     font-size: 30px;
     width: 200px;
@@ -9964,6 +9964,8 @@ a.button {
 .ticket-area .ticket-action-button {
   width: 100%;
   margin: 15px 0; }
+  .ticket-area .ticket-action-button .button-assertive {
+    background-color: #ffa800; }
   .ticket-area .ticket-action-button .button {
     font-size: 25px;
     width: 80%;

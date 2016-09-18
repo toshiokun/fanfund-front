@@ -24,11 +24,36 @@ angular.module('starter.controllers', [])
 }])
 
 .component('ticket', {
+  bindings: {
+    program: '<'
+  },
   templateUrl: 'templates/ticket.html',
-  controller: ['$scope', function($scope, $ionicPopup){
+  controller: ['$scope', '$ionicPopup', 'HttpService', function($scope, $ionicPopup, httpService){
     $scope.slide = false;
+    $scope.price = 320;
+    $scope.number = 0;
     $scope.changeSlide = function(){
       $scope.slide = !$scope.slide;
+    }
+    $scope.buyTicket = function(){
+      $ionicPopup.show({
+        title: '本当に購入いたしますか？',
+        subTitle: '購入後のキャンセルはできません',
+        scope: $scope,
+        buttons: [
+        { text: 'キャンセル' },
+        {
+          text: '<b>購入</b>',
+          type: 'button-positive',
+          onTap: function(e) {
+            httpService.buyTicket()
+        }
+      }
+      ]
+    })
+    }
+    $scope.sellTicket = function(){
+
     }
   }]
 })
