@@ -27,8 +27,13 @@ angular.module('starter.services', [])
     },
     countUsers: function(programId, onSuccess, onFailed){
       $http.get(rootUrl + "/api/v1/programs" + "/" + programId + "/stocks/count/user?token=" + localStorage["token"]).success(onSuccess).error(onFailed);
-    }
-
+    },
+    getSelf: function(onSuccess, onFailed){
+      $http.get(rootUrl + "/api/v1/auth/self" + "?token=" + localStorage["token"]).success(onSuccess).error(onFailed);
+    },
+    getStock: function(programId, onSuccess, onFailed){
+      $http.get(rootUrl + "/api/v1/programs/" + programId + "/stocks" + "?token=" + localStorage["token"]).success(onSuccess).error(onFailed);
+    },
   }
 }])
 .factory('Chats', function() {

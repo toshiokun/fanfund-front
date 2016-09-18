@@ -14,16 +14,16 @@
 			</div>
 		</ion-item>
 		<ion-item class="ticket-count">
-			<input type="number" ng-model="$ctrl.number" ng-blur="reload(this)">枚
-		</ion-item>
-		<ion-item class="ticket-count">
-			<input type="number" ng-model="$ctrl.price" ng-blur="relaod(this)">P
-		</ion-item>
+				<input type="number" ng-model="$ctrl.number" ng-blur="reload(this)">枚
+			</ion-item>
 		<ion-item class="option-item" on-tap="changeSlide()">
 			▼オプション
 		</ion-item>
 		<ion-item class="animate-slide" ng-if="slide">
-			オプション追加用
+			<ion-item class="ticket-count">
+				<span>予約ポイント</span>
+				<input type="number" ng-model="$ctrl.price" ng-blur="relaod(this)">P
+			</ion-item>
 		</ion-item>
 	</ion-list>
 	<div class="ticket-action-button">
@@ -42,7 +42,7 @@
 				保有チケット数
 			</div>
 			<div class="score-area ticket-score-area">
-				22
+				{{$ctrl.stock}}
 			</div>
 		</span>
 		<span class="present-data">
@@ -50,7 +50,7 @@
 				保有ポイント数
 			</div>
 			<div class="score-area point-score-area">
-				114514
+				{{$ctrl.point}}
 			</div>
 		</span>
 	</div>

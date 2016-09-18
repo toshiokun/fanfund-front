@@ -26,6 +26,18 @@ angular.module('starter.controllers', [])
   }, function(data){
     console.log(data);
   });
+   httpService.getSelf(function(data){
+    console.log(data);
+    $scope.point = data.data.profile.tbs_point;
+  }, function(data){
+    console.log(data);
+  });
+   httpService.getStock($stateParams.programId, function(data){
+    console.log(data);
+    $scope.stock = data.data[0].stock_number;
+  }, function(data){
+    console.log(data);
+  });
  })
   $scope.selectedIndex = 0;
   $scope.buttonClicked = function(index){
@@ -37,13 +49,15 @@ angular.module('starter.controllers', [])
 
 .component('ticket', {
   bindings: {
-    program: '<'
+    program: '<',
+    point: '<',
+    stock: '<'
   },
   templateUrl: 'templates/ticket.html',
   controller: ['$scope', '$ionicPopup', 'HttpService', function($scope, $ionicPopup, httpService){
     var ctrl = this;
     $scope.slide = false;
-    ctrl.price = 320;
+    ctrl.price = 100;
     ctrl.number = 0;
     $scope.changeSlide = function(){
       $scope.slide = !$scope.slide;
@@ -59,7 +73,20 @@ angular.module('starter.controllers', [])
           text: '<b>購入</b>',
           type: 'button-positive',
           onTap: function(e) {
-            httpService.buyTicket(ctrl.program.id, ctrl.number, ctrl.price, function(data){console.log(data)}, function(data){console.log(data)})
+            httpService.buyTicket(ctrl.program.id, ctrl.number, ctrl.price, function(data){
+              httpService.getSelf(function(data){
+                console.log(data);
+                ctrl.point = ctrl.point - ctrl.number * ctrl.price;
+              }, function(data){
+                console.log(data);
+              });
+              httpService.getStock(ctrl.program.id, function(data){
+                console.log(data);
+                ctrl.stock = ctrl.stock + ctrl.number;
+              }, function(data){
+                console.log(data);
+              });
+            }, function(data){console.log(data)})
           }
         }
         ]
@@ -76,7 +103,20 @@ angular.module('starter.controllers', [])
           text: '<b>売却</b>',
           type: 'button-positive',
           onTap: function(e) {
-            httpService.sellTicket(ctrl.program.id, ctrl.number, ctrl.price, function(data){console.log(data)}, function(data){console.log(data)})
+            httpService.sellTicket(ctrl.program.id, ctrl.number, ctrl.price, function(data){
+              httpService.getSelf(function(data){
+                console.log(data);
+                ctrl.point = data.data.profile.tbs_point;
+              }, function(data){
+                console.log(data);
+              });
+              httpService.getStock(ctrl.program.id, function(data){
+                console.log(data);
+                ctrl.stock = data.data[0].stock_number;
+              }, function(data){
+                console.log(data);
+              });
+            }, function(data){console.log(data)})
           }
         }
         ]
