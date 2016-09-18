@@ -1,7 +1,7 @@
 <div class="privilage-card card">
 	<ion-list>
 		<ion-item class="item-thumbnail-left">
-			<img src="img/ousama.png">
+			<img ng-src="{{$ctrl.program.image_url}}">
 			<div class="privilage-title">
 				応援特典
 			</div>
@@ -15,7 +15,7 @@
 			一般特典
 		</div>
 		<ion-item class="item-thumbnail-right">
-			<img src="img/tanihara.png">
+			<img ng-src="{{$ctrl.program.program_info.privilege_1_url}}">
 			<div class="privilage-content">
 				{{$ctrl.program.program_info.privilege_1}}
 			</div>
@@ -24,7 +24,7 @@
 			特別特典
 		</div>
 		<ion-item class="item-thumbnail-right">
-			<img src="img/layer.png">
+			<img ng-src="{{$ctrl.program.program_info.privilege_2_url}}">
 			<div class="privilage-content">
 				{{$ctrl.program.program_info.privilege_2}}
 			</div>
