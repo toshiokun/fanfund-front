@@ -64,7 +64,7 @@ angular.module('starter.controllers', [])
           text: '<b>売却</b>',
           type: 'button-positive',
           onTap: function(e) {
-            httpService.buyTicket(ctrl.program.id, ctrl.number, ctrl.price, function(data){console.log(data)}, function(data){console.log(data)})
+            httpService.sellTicket(ctrl.program.id, ctrl.number, ctrl.price, function(data){console.log(data)}, function(data){console.log(data)})
           }
         }
         ]

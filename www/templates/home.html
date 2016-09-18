@@ -16,18 +16,13 @@
 				<img src="img/bell.png">あなたにおすすめ
 			</label>
 			<ion-scroll zooming="true" direction="x" scrollbar-x="false">
-				<img class="program-image" src="img/matuko.jpg">
-				<img class="program-image" src="img/ousama.png" on-tap="goToTimeline(1)">
-				<img class="program-image" src="img/sekai.jpg">
-				<img class="program-image" src="img/suiyoubi.png">
-				<img class="program-image" src="img/sekai.jpg">
-				<img class="program-image" src="img/sekai.jpg">
+				<img class="program-image" ng-repeat="program in programs" src="img/matuko.jpg" on-tap="goToTimeline(program.id)">
 			</ion-scroll>
 		</div>
 		<ion-scroll direction="y">
 		<div class="home-row row">
 			<div class="col">
-				<div class="card" ng-repeat="program in programs" ng-if="$index % 2 == 0">
+				<div class="card" ng-repeat="program in programs" ng-if="$index % 2 == 0" on-tap="goToTimeline(program.id)">
 					<span class="program-image-area">
 						<img class="program-image" src="img/matuko.jpg">
 					</span>
@@ -35,12 +30,12 @@
 						{{program.name}}
 					</h4>
 					<div class="program-content">
-						{{program.program_info}}
+						{{program.program_info.description}}
 					</div>
 				</div>
 			</div>
 			<div class="col">
-				<div class="card" ng-repeat="program in programs" ng-if="$index % 2 == 1">
+				<div class="card" ng-repeat="program in programs" ng-if="$index % 2 == 1" on-tap="goToTimeline(program.id)">
 					<span class="program-image-area">
 						<img class="program-image" src="img/suiyoubi.png">
 					</span>
@@ -48,7 +43,7 @@
 						{{program.name}}
 					</h4>
 					<div class="program-content">
-						{{program.program_info}}
+						{{program.program_info.description}}
 					</div>
 				</div>
 			</div>

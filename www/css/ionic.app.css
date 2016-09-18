@@ -9935,6 +9935,9 @@ a.button {
   color: red;
   white-space: normal; }
 
+.ticket-area .item-thumbnail-left .product-name {
+  white-space: normal; }
+
 .ticket-area .item-thumbnail-left .point-price {
   border: transparent;
   height: 50px;
@@ -10070,7 +10073,10 @@ a.button {
   .introduce-card ion-list ion-item .program-title {
     font-weight: bold;
     font-size: 30px;
-    line-height: normal; }
+    line-height: normal;
+    white-space: normal; }
+  .introduce-card ion-list ion-item .cast-list {
+    white-space: normal; }
   .introduce-card ion-list ion-item.dot-thumbnail {
     padding-left: 66px; }
     .introduce-card ion-list ion-item.dot-thumbnail img {
