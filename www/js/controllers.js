@@ -29,9 +29,10 @@ angular.module('starter.controllers', [])
   },
   templateUrl: 'templates/ticket.html',
   controller: ['$scope', '$ionicPopup', 'HttpService', function($scope, $ionicPopup, httpService){
+    var ctrl = this;
     $scope.slide = false;
-    $scope.price = 320;
-    $scope.number = 0;
+    ctrl.price = 320;
+    ctrl.number = 0;
     $scope.changeSlide = function(){
       $scope.slide = !$scope.slide;
     }
@@ -46,14 +47,28 @@ angular.module('starter.controllers', [])
           text: '<b>購入</b>',
           type: 'button-positive',
           onTap: function(e) {
-            httpService.buyTicket()
+            httpService.buyTicket(ctrl.program.id, ctrl.number, ctrl.price, function(data){console.log(data)}, function(data){console.log(data)})
+          }
         }
-      }
-      ]
-    })
+        ]
+      })
     }
     $scope.sellTicket = function(){
-
+      $ionicPopup.show({
+        title: '本当に売却いたしますか？',
+        subTitle: '売却後のキャンセルはできません',
+        scope: $scope,
+        buttons: [
+        { text: 'キャンセル' },
+        {
+          text: '<b>売却</b>',
+          type: 'button-positive',
+          onTap: function(e) {
+            httpService.buyTicket(ctrl.program.id, ctrl.number, ctrl.price, function(data){console.log(data)}, function(data){console.log(data)})
+          }
+        }
+        ]
+      })
     }
   }]
 })

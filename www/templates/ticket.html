@@ -14,10 +14,10 @@
 			</div>
 		</ion-item>
 		<ion-item class="ticket-count">
-			<input type="number" ng-model="number">枚
+			<input type="number" ng-model="$ctrl.number" ng-blur="reload(this)">枚
 		</ion-item>
 		<ion-item class="ticket-count">
-			<input type="number" ng-model="price">P
+			<input type="number" ng-model="$ctrl.price" ng-blur="relaod(this)">P
 		</ion-item>
 		<ion-item class="option-item" on-tap="changeSlide()">
 			▼オプション
@@ -32,7 +32,7 @@
 		</button>
 	</div>
 	<div class="ticket-action-button">
-		<button class="button button-positive">
+		<button class="button button-positive" on-tap="sellTicket()">
 			チケットを売る
 		</button>
 	</div>

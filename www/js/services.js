@@ -5,7 +5,7 @@ angular.module('starter.services', [])
 .service('HttpService',['$http', 'RootUrl', function($http, rootUrl){
   return {
     login: function(data, onSuccess, onFailed){
-      $http.post(rootUrl + "/api/v1/user/login", data).success(onSuccess).error(onFailed);
+      $http.post(rootUrl + "/api/v1/auth/login", data).success(onSuccess).error(onFailed);
     },
     getPrograms: function(onSuccess, onFailed){
       $http.get(rootUrl + "/api/v1/programs" + "?token=" + localStorage["token"]).success(onSuccess).error(onFailed);
@@ -16,10 +16,11 @@ angular.module('starter.services', [])
       .error(onFailed);
     },
     buyTicket: function(programId, number, price, onSuccess, onFailed){
-      $http.post(rootUrl + "/api/v1/programs" + "/" + programId + "buylist?token=" + localStorage["token"], {"number": number, "price": price, "type": "limit"}).success(onSuccess).error(onFailed);
+      console.log({"number": number, "price": price, "type": "limit"});
+      $http.post(rootUrl + "/api/v1/programs" + "/" + programId + "/buylist?token=" + localStorage["token"], {"number": number, "price": price, "type": "limit"}).success(onSuccess).error(onFailed);
     },
     sellTicket: function(){
-      $http.post(rootUrl + "/api/v1/programs" + "/" + programId + "selelist?token=" + localStorage["token"], {"number": number, "price": price, "type": "limit"}).success(onSuccess).error(onFailed);
+      $http.post(rootUrl + "/api/v1/programs" + "/" + programId + "/selelist?token=" + localStorage["token"], {"number": number, "price": price, "type": "limit"}).success(onSuccess).error(onFailed);
     }
   }
 }])
